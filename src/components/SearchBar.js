@@ -2,9 +2,9 @@ import React from "react";
 
 function searchBar(props) {
   return (
-    <div class="col col-sm-4">
+    <div className="col col-sm-4">
       <input 
-            class="form-control" 
+            className="form-control border-2 border-slate-500" 
             placeholder="Search Movie..."
             value={props.value}
             onChange={(event)=> props.setSearchValue(event.target.value)}

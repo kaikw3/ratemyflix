@@ -1,14 +1,42 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider} from "react-router-dom";
+import Contact from "./home/Contact";
+import MyReviews from "./home/MyReviews";
+import Movies from "./home/Movies";
+import TV from "./home/TV";
 
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/myReviews",
+    element: <MyReviews />,
+  },
+  {
+    path: "/movies",
+    element: <Movies />,
+  },
+  {
+    path: "/tv",
+    element: <TV />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
+  },
+]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

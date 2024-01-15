@@ -1,11 +1,83 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  background-color: #141414;
-  color: #ffffff;
-  font-family: 'Times New Roman', Times, serif;
+  background-color: #FAF9F6;
+  color: #1f1f1f;
+  font-family: 'Oswald';
   padding-top: 20px;
   padding-left: 10px;
+  
 };
 
-.bigHeader{
-  padding-top: 20px;
-};
+.movie-app{
+  overflow-x: auto;
+  flex-wrap: nowrap
+
+}
+
+.image-container{
+  position: relative;
+}
+
+.image-container:hover{
+  transform: scale(1.08);
+  cursor: pointer;
+  transition: ease 0.15s;
+}
+
+.image-container:not(:hover){
+  transition: ease 0.15s;
+  cursor: pointer;
+}
+
+.overlay{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  position: absolute;
+  background: rgba(30, 30, 30, 1);
+  width: 57%;
+  height: 15%;
+  transition: ease 0.15s;
+  opacity: 0;
+  bottom: 0;
+  font-size: 15px;
+  padding: 5px;
+  text-align: center;
+  border-style: solid;
+  border-color: #F2EBE2;
+}
+
+.image-container:hover .overlay{
+  opacity: 1;
+  transition: ease 0.15s;
+  cursor: pointer;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #FAF9F6;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
