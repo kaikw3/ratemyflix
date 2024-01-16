@@ -25,7 +25,6 @@ function Movies() {
     const responseRecent = await fetch(urlRecent);
     const jsonResponseRecent = await responseRecent.json();
 
-    console.log(jsonResponseRecent);  // To Test
 
     if (jsonResponseRecent.results) {
         setRecentlyReleased(jsonResponseRecent.results);
@@ -37,7 +36,6 @@ function Movies() {
     const responseTopRated = await fetch(urlTopRated);
     const jsonResponseTopRated = await responseTopRated.json();
 
-    console.log(jsonResponseTopRated);  // To Test
 
     if (jsonResponseTopRated.results) {
         setTopRatedMovies(jsonResponseTopRated.results);
@@ -48,7 +46,6 @@ function Movies() {
     const responseUpcoming = await fetch(urlupcoming);
     const jsonResponseUpcoming = await responseUpcoming.json();
 
-    console.log(jsonResponseUpcoming);  // To Test
 
     if (jsonResponseUpcoming.results) {
         setUpcoming(jsonResponseUpcoming.results);
